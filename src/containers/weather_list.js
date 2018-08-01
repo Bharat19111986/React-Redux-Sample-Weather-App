@@ -6,7 +6,12 @@ class WeatherList extends Component
     renderWeather(cityData){
         console.log(cityData);
         return(
-            <tr>{cityData.city.name}</tr>
+            <tr>
+            <td>{cityData.city.name}</td>
+            <td>{cityData.list[0].main.temp}<sup>K</sup></td>
+            <td>{cityData.list[0].main.pressure}<sup>mm</sup></td>
+            <td>{cityData.list[0].main.humidity}<sup>cc</sup></td>
+            </tr>
         );
     }
     render(){
