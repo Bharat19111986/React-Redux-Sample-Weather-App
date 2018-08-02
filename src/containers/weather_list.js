@@ -12,6 +12,7 @@ class WeatherList extends Component
         const humidity = cityData.list.map(weather => weather.main.humidity);
         console.log(temps);
         return(
+
             <tr key={cityData.city.name}>
             <td>{cityData.city.name}</td>
             <td>
@@ -23,7 +24,7 @@ class WeatherList extends Component
             <td>
                 <Chart data={humidity} color="red"/>
             </td>
-            
+           
             </tr>
         );
     }
